@@ -22,7 +22,7 @@
 = link_to 'Back to movie list', movies_path
 <br/>
 - if @movie.director.to_s.empty?
-  - #flash[:warning] = "'#{@movie.title}' has no director info." 
-  = link_to 'Find Movies With Same Director', root_path()
+  - flash[:warning] = "'#{@movie.title}' has no director info."
+  = link_to 'Find Movies With Same Director', movies_path()
 - else
   = link_to 'Find Movies With Same Director', director_path(:director => @movie.director)
