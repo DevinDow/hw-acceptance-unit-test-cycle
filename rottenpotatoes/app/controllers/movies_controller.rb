@@ -35,6 +35,12 @@ class MoviesController < ApplicationController
 
   def director
     @director = params[:director]
+    #puts("@director=")
+    #puts(@director)
+    if (@director.to_s.empty?)
+      flash[:warning] = "'#{@movie.title}' has no director info."
+      redirect_to root
+    end
     @movies = Movie.where(director: @director)
   end
 
