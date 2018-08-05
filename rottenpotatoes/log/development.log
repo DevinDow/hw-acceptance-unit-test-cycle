@@ -1032,3 +1032,146 @@ Processing by MoviesController#edit as HTML
   [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 9]]
   Rendered movies/edit.html.haml within layouts/application (14.3ms)
 Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:08:42 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:08:48 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.0ms)
+Completed 200 OK in 61ms (Views: 34.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:08:51 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for 75.63.25.102 at 2018-08-05 14:08:55 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.haml within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `director' for #<Movie:0x007f3fc6138ed8>):
+    14:   = date_select :movie, :release_date
+    15: 
+    16:   = label :movie, :director, 'Director'
+    17:   = text_field :movie, :director
+    18: 
+    19:   = submit_tag 'Update Movie Info'
+  app/views/movies/edit.html.haml:17:in `block in _app_views_movies_edit_html_haml__1725405239383542372_69955934368540'
+  app/views/movies/edit.html.haml:5:in `_app_views_movies_edit_html_haml__1725405239383542372_69955934368540'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDirectorToMovies (20180805130107)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "movies" ADD "director" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180805130107"]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:10:27 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:10:32 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 74ms (Views: 35.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:10:36 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for 75.63.25.102 at 2018-08-05 14:10:38 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/movies/1" for 75.63.25.102 at 2018-08-05 14:10:43 +0000
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pvye9B4S17l0KAlOjR6DKrAWJXO2wEQvx8U4p/Ydf00HLhFfTuItyQtQfXPD8cTuXX2hFKogQVilCFI/YVZnrg==", "movie"=>{"title"=>"Aladdin", "rating"=>"G", "release_date(1i)"=>"1992", "release_date(2i)"=>"11", "release_date(3i)"=>"25", "director"=>"Devin"}, "commit"=>"Update Movie Info", "id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "movies" SET "director" = ?, "updated_at" = ? WHERE "movies"."id" = ?  [["director", "Devin"], ["updated_at", "2018-08-05 14:10:43.213017"], ["id", 1]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://a5b2287d868d4a6b9a9d894aa084ce1e.vfs.cloud9.us-west-2.amazonaws.com/movies/1
+Completed 302 Found in 10ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:10:43 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:10:46 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:10:48 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/1/edit" for 75.63.25.102 at 2018-08-05 14:10:51 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:11:53 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:11:57 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 62ms (Views: 36.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:12:02 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for 75.63.25.102 at 2018-08-05 14:12:06 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.1ms)
