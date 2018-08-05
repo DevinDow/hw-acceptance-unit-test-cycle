@@ -1448,3 +1448,197 @@ Processing by MoviesController#director as HTML
   [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" IS NULL[0m
   Rendered movies/director.html.haml within layouts/application (3.8ms)
 Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:34:49 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:34:52 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 79ms (Views: 52.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:34:55 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/director" for 75.63.25.102 at 2018-08-05 14:34:57 +0000
+Processing by MoviesController#director as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" IS NULL[0m
+  Rendered movies/director.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/director?director=%22Devin%22" for 75.63.25.102 at 2018-08-05 14:35:06 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"\"Devin\""}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = ?  [["director", "\"Devin\""]]
+  Rendered movies/director.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:36:35 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:36:37 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 74ms (Views: 36.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:36:51 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/director?director=Devin" for 75.63.25.102 at 2018-08-05 14:36:55 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/director?director=Devin2" for 75.63.25.102 at 2018-08-05 14:37:03 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = ?  [["director", "Devin2"]]
+  Rendered movies/director.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/director?director=Devin%20Dow" for 75.63.25.102 at 2018-08-05 14:37:08 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin Dow"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin Dow"]]
+  Rendered movies/director.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/director?director=Devin" for 75.63.25.102 at 2018-08-05 14:37:14 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = ?  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:38:06 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:38:08 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 80ms (Views: 52.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:38:12 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/director?director=Devin" for 75.63.25.102 at 2018-08-05 14:38:14 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:39:26 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:39:29 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (31.2ms)
+Completed 200 OK in 80ms (Views: 53.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:39:32 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/director?director=Devin" for 75.63.25.102 at 2018-08-05 14:39:34 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:40:37 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-05 14:40:39 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 76ms (Views: 35.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-05 14:40:43 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/director?director=Devin" for 75.63.25.102 at 2018-08-05 14:40:44 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:40:59 +0000
+
+
+Started GET "/movies/director?director=Devin" for 75.63.25.102 at 2018-08-05 14:41:02 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 59ms (Views: 37.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:41:22 +0000
+
+
+Started GET "/movies/director?director=Devin" for 75.63.25.102 at 2018-08-05 14:41:28 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 59ms (Views: 38.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-05 14:44:35 +0000
+
+
+Started GET "/movies/director?director=Devin" for 75.63.25.102 at 2018-08-05 14:44:38 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (24.5ms)
+Completed 200 OK in 77ms (Views: 55.6ms | ActiveRecord: 1.3ms)

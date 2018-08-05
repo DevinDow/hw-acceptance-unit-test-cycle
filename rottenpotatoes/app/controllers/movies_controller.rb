@@ -34,7 +34,8 @@ class MoviesController < ApplicationController
   end
 
   def director
-    @movies = Movie.where(director: params[:director])
+    @director = params[:director]
+    @movies = Movie.where(director: @director)
   end
 
   def new
