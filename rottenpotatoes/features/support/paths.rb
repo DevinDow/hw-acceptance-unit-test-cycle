@@ -23,7 +23,10 @@ module NavigationHelpers
       edit_movie_path(Movie.where(title: $1).first.id)
 
     when /^the Similar Movies page for "(.*)"$/
-      director_path(Movie.where(title: $1).first.director)
+      #puts($1)
+      @director = Movie.where(title: $1).first.director
+      #puts(@director)
+      director_path(@director)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
