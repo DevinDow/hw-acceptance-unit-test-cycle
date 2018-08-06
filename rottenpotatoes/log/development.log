@@ -3285,3 +3285,67 @@ Processing by MoviesController#director as HTML
   [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = ?[0m  [["director", "Devin"]]
   Rendered movies/director.html.haml within layouts/application (1.0ms)
 Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 75.63.25.102 at 2018-08-06 18:27:07 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 18:27:07 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 201ms (Views: 175.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 75.63.25.102 at 2018-08-06 18:27:10 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/match/1" for 75.63.25.102 at 2018-08-06 18:27:12 +0000
+Processing by MoviesController#match as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://a5b2287d868d4a6b9a9d894aa084ce1e.vfs.cloud9.us-west-2.amazonaws.com/movies/director/Devin
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/director/Devin" for 75.63.25.102 at 2018-08-06 18:27:12 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"director"=>"Devin"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = ?  [["director", "Devin"]]
+  Rendered movies/director.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 18:27:13 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2" for 75.63.25.102 at 2018-08-06 18:27:14 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/match/2" for 75.63.25.102 at 2018-08-06 18:27:16 +0000
+Processing by MoviesController#match as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to https://a5b2287d868d4a6b9a9d894aa084ce1e.vfs.cloud9.us-west-2.amazonaws.com/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 18:27:16 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)

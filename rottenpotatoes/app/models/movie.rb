@@ -4,4 +4,8 @@ class Movie < ActiveRecord::Base
     %w(G PG PG-13 NC-17 R)
   end
   
+  def Movie.same_director(director)
+    Movie.where(director)
+  end
+  
 end

@@ -52,7 +52,7 @@ class MoviesController < ApplicationController
     @director = params[:director]
     puts("@director=")
     puts(@director)
-    @movies = Movie.where(director: @director)
+    @movies = Movie.same_director(director: @director)
   end
 
   def new
