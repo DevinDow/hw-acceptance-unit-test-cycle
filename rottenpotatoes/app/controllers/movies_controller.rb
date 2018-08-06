@@ -33,15 +33,25 @@ class MoviesController < ApplicationController
     @movies = Movie.where(rating: @selected_ratings.keys).order(ordering)
   end
 
+  def match
+    # find matches for director of a movie
+    id = params[:id] # retrieve movie ID from URI route
+    @movie = Movie.find(id) # look up movie by unique ID
+    puts("@movie.title=")
+    puts(@movie.title)
+    if @movie.director.to_s.empty?
+      flash[:warning] = "'#{@movie.title}' has no director info."
+      redirect_to movies_path
+    else
+      redirect_to director_path(@movie.director)
+    end
+  end
+
   def director
     # shows table of Movies directed by the :director param
     @director = params[:director]
-    #puts("@director=")
-    #puts(@director)
-    if (@director.to_s.empty?)
-      flash[:warning] = "'#{@movie.title}' has no director info."
-      redirect_to root
-    end
+    puts("@director=")
+    puts(@director)
     @movies = Movie.where(director: @director)
   end
 

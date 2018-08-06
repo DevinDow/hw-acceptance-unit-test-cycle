@@ -1,6 +1,7 @@
 Rottenpotatoes::Application.routes.draw do
   
-  # 'movies/director' before '/movies/:id'
+  # 'movies/xxx' before '/movies/:id' (resources : movie)
+  get 'movies/match/:id', to: 'movies#match', as: 'match'
   get 'movies/director(/:director)', to: 'movies#director', as: 'director'
 
   resources :movies
