@@ -2893,3 +2893,115 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
   Rendered movies/index.html.haml within layouts/application (3.7ms)
 Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-06 15:01:35 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:01:40 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 104ms (Views: 69.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-06 15:01:41 +0000
+
+
+Started GET "/movies/11" for 75.63.25.102 at 2018-08-06 15:01:54 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered movies/show.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/movies/11" for 75.63.25.102 at 2018-08-06 15:01:55 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xITUCKz4Z0kXJ2Bf8k28ZRszVVv/AZGmD1nnhgTPL4ZY0ptoL518dsVTP6a/Hcuokmqf0LtVX/ZIlh6TBx2PnQ==", "id"=>"11"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 11]]
+  [1m[35m (5.7ms)[0m  commit transaction
+Redirected to https://a5b2287d868d4a6b9a9d894aa084ce1e.vfs.cloud9.us-west-2.amazonaws.com/movies
+Completed 302 Found in 8ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:01:56 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-06 15:05:06 +0000
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-06 15:07:21 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:07:55 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 63ms (Views: 35.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/rails.png" for 75.63.25.102 at 2018-08-06 15:07:59 +0000
+
+
+Started GET "/" for 75.63.25.102 at 2018-08-06 15:08:18 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:08:18 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 75.63.25.102 at 2018-08-06 15:08:22 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:08:22 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 75.63.25.102 at 2018-08-06 15:08:32 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:08:32 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 200ms (Views: 170.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 75.63.25.102 at 2018-08-06 15:14:55 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:14:55 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 203ms (Views: 176.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:14:57 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 75.63.25.102 at 2018-08-06 15:15:01 +0000
+
+
+Started GET "/movies" for 75.63.25.102 at 2018-08-06 15:15:01 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)

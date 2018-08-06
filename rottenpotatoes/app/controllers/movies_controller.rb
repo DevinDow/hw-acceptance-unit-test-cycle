@@ -34,6 +34,7 @@ class MoviesController < ApplicationController
   end
 
   def director
+    # shows table of Movies directed by the :director param
     @director = params[:director]
     #puts("@director=")
     #puts(@director)
